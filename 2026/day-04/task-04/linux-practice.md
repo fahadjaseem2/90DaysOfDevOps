@@ -14,6 +14,8 @@ cron service is active and running, shows main PID and recent activity.
 ### `4.` `systemctl list-units --type=service | grep cron`
 list only active service of cron
 
+{`systemctl list-units --type=service --no-pager` **for non pager view**}
+
 ### `5.` `systemctl list-units | grep cron`
 This includes services, sockets, timer, mounts related to cron
 
