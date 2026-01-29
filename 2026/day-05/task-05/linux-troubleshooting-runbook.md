@@ -20,6 +20,7 @@ Codename:	noble
 ```
 **Observation** - systemd based OS, logs are store /var/log/auth.log or journalctl
 
+---
 
 ## 2. Filesystem Sanity
 ### `mkdir /temp/runbook-demo && cp /etc/crontab /tmp/runbook-demo/crontab-demo`
@@ -30,6 +31,7 @@ Codename:	noble
 ```
 **Observation** - File system is writable (*if the file system is Read-Only, cron cannot write temp file or update logs*)
 
+---
 
 ## 3. Cpu/Memory
 ### `ps -o pid,pcpu,pmem,comm -p 517` {517 = cron PID} **or** `ps -C cron -o pid,pcpu,pmem,comm`
@@ -49,6 +51,7 @@ Swap:             0B          0B          0B
 ```
 **Observation** - Ample memory available
 
+---
 
 ## 4. Disk/IO (input/output)
 ### `df -h /var`
@@ -70,7 +73,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu----
 ```
 **Observation** - No I/O wait
 
-
+---
 
 ## 5. Network
 ### `sudo ss tulpn | grep cron` {ss = display socket statics(network connection)}
@@ -94,7 +97,7 @@ rtt min/avg/max/mdev = 0.015/0.025/0.033/0.007 ms
 ```
 **Observation** - 0% oacket loss, Network is heakthy
 
-
+---
 
 ## 6. Logs
 ### `journalctl -u cron -n 20`  or `journalcrl -u cron -n 20 --no-pager`
@@ -113,7 +116,7 @@ Jan 28 23:25:01 ip-172-31-7-78 CRON[15886]: pam_unix(cron:session): session clos
 ```
 **Observation** - Seesion are opening and closing cleanly, no errors
 
-
+---
 
 ## 7. If this worsen(Next Step)
 ### `systemctl restart cron && systemctl status cron`
