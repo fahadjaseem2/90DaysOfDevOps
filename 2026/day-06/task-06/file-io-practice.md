@@ -1,7 +1,7 @@
 # Practice Basic File Read/Write
 
 ## 1. Creating file And Writing text to a file
-`mkdir notes.txt`
+`touch notes.txt`
 
 `echo "Learning basic linux file operations." > notes.txt`
 
