@@ -1,0 +1,9 @@
+Learning basic Linux file operations
+Using touch to create files
+Using echo to write content
+Understanding overwrite with >
+Appending new lines using >>
+Reading files using cat
+Viewing partial content with head
+Checking last lines with tail
+Using tee to write and display
