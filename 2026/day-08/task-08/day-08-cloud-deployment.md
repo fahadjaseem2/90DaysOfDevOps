@@ -4,10 +4,8 @@
 ## Part 1. Launch & SSH
 - Login AWS Console → EC2 → Launch Instance → Create Key pair.
 - ssh -i "temp_key.pem" ubuntu@ec2-54-80-196-36.compute-1.amazonaws.com
-```
-Last login: Sun Feb  1 14:19:48 2026 from 152.58.119.17
-ubuntu@ip-172-31-7-78:~$ 
-```
+<img width="576" height="454" alt="Screenshot 2026-02-01 at 7 50 49 PM" src="https://github.com/user-attachments/assets/fc51a48c-d51d-461f-bb6f-29fc168c130c" />
+
 
 ## Part 1. Install Nginx and Docker
 `sudo apt update && sudo apt get upgrade -y`
@@ -33,7 +31,8 @@ ubuntu@ip-172-31-7-78:~$
 - EC2 → Instance → Security Group → Edit Inbound: Type=HTTP(80)
 - Browser: http://54.80.196.36:80 → Nginx welcome page.
 
-SCREENSHOT
+<img width="561" height="215" alt="Screenshot 2026-02-01 at 8 44 44 PM" src="https://github.com/user-attachments/assets/adfacf40-c901-4f62-a9b4-6689e3310120" />
+
 
 
 ## part 4. Nginx Logs
