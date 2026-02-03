@@ -25,6 +25,7 @@ getent = Get Entiries = shows **User ID**, **Group ID**, **Home directory**, **L
 
 
 ## Task 2. Create Group
+
 `sudo groupadd developers`
 
 `sudo groupadd admin`
@@ -37,11 +38,12 @@ getent = Get Entiries = shows **User ID**, **Group ID**, **Home directory**, **L
 
 
 ## Task 3. Assign User to Group
-Adding users **tokyo** and **berlin** to group **developers**.
+
+### Adding users **tokyo** and **berlin** to group **developers**.
 
 `sudo usermod -aG developers tokyo berlin`
 
-Adding user **professor** to **admin** group.
+### Adding user **professor** to **admin** group.
 
 `sudo usermod -aG  admin professor`
 
@@ -53,7 +55,7 @@ Adding user **professor** to **admin** group.
 
 ` sudo mkdir /opt/dev-project`
 
-Cretaing directory on root directory
+### Cretaing directory on root directory
 
 `ls -l /opt`
 
@@ -62,7 +64,7 @@ Cretaing directory on root directory
 
 `sudo chown root:developers /opt/dev-project`
 
-Change group ownership from **root** to **developers**
+### Change group ownership from **root** to **developers**
 
 <img width="568" height="73" alt="Screenshot 2026-02-03 at 6 24 17 AM" src="https://github.com/user-attachments/assets/82cc4e57-f209-430d-996c-91e8d72827dc" />
 
@@ -72,13 +74,14 @@ Change group ownership from **root** to **developers**
 <img width="567" height="76" alt="Screenshot 2026-02-03 at 6 26 03 AM" src="https://github.com/user-attachments/assets/80185de6-cb97-4d33-9624-2939239356c6" />
 
 
-The /dev-project directory is accessible to users **tokyo** and **berlin**, and both users have permission to create files within the directory.
+### The /dev-project directory is accessible to users **tokyo** and **berlin**, and both users have permission to create files within the directory.
 
 <img width="573" height="75" alt="Screenshot 2026-02-03 at 6 36 37 AM" src="https://github.com/user-attachments/assets/4ce47c2d-7c31-4b46-bb99-52f160759303" />
 
 
----
+
 ## Task 5. Team Workspace
+
 ### Creating user nairobi with home directory
 
 `sudo useradd -m nairobi -s /bin/bash`
@@ -110,5 +113,14 @@ The /dev-project directory is accessible to users **tokyo** and **berlin**, and 
 ### Testing by creating file as nairobi
 
 <img width="563" height="61" alt="Screenshot 2026-02-03 at 2 52 03 PM" src="https://github.com/user-attachments/assets/0910f55e-ba19-4f9e-bf98-bfa91686ca10" />
+
+---
+
+
+# What I Learned
+- How Linux users and group control access in multi-user environments
+- Difference between user ownership and group permissions
+- Importance of group-based access instead of individual permission
+
 
 
