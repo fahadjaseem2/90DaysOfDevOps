@@ -12,17 +12,19 @@
 
 **before**
 
-Screenshot
+<img width="577" height="91" alt="Screenshot 2026-02-03 at 4 30 36 PM" src="https://github.com/user-attachments/assets/52db2d8b-8cf6-4bd5-9d3d-232a4a589645" />
+
 
 **After**
 
-screenshot
+<img width="569" height="80" alt="Screenshot 2026-02-03 at 4 36 00 PM" src="https://github.com/user-attachments/assets/ab00ca76-3cbe-4d5d-80c2-6fd76b3131dd" />
+
 
 - project/ 
 
 Permissions: 755 (rwxr-xr-x)
 
-screenshot 
+<img width="511" height="21" alt="Screenshot 2026-02-03 at 4 39 26 PM" src="https://github.com/user-attachments/assets/c0c468b4-6418-4e38-b68e-a0ceb0acf230" />
 
 
 ## Command used
