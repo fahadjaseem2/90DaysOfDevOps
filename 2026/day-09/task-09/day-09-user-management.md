@@ -62,6 +62,7 @@ getent = Get Entiries = shows **User ID**, **Group ID**, **Home directory**, **L
 <img width="567" height="58" alt="Screenshot 2026-02-03 at 6 18 09 AM" src="https://github.com/user-attachments/assets/f8fc1bf3-14fc-4ee7-9b30-28828b11a0ac" />
 
 
+
 `sudo chown root:developers /opt/dev-project`
 
 ### Change group ownership from **root** to **developers**
@@ -69,12 +70,13 @@ getent = Get Entiries = shows **User ID**, **Group ID**, **Home directory**, **L
 <img width="568" height="73" alt="Screenshot 2026-02-03 at 6 24 17 AM" src="https://github.com/user-attachments/assets/82cc4e57-f209-430d-996c-91e8d72827dc" />
 
 
+
 `sudo chmod 775 /opt/dev-project`
 
 <img width="567" height="76" alt="Screenshot 2026-02-03 at 6 26 03 AM" src="https://github.com/user-attachments/assets/80185de6-cb97-4d33-9624-2939239356c6" />
 
 
-### The /dev-project directory is accessible to users **tokyo** and **berlin**, and both users have permission to create files within the directory.
+**The /dev-project directory is accessible to users *tokyo* and *berlin*, and both users have permission to create files within the directory.**
 
 <img width="573" height="75" alt="Screenshot 2026-02-03 at 6 36 37 AM" src="https://github.com/user-attachments/assets/4ce47c2d-7c31-4b46-bb99-52f160759303" />
 
