@@ -17,6 +17,14 @@
 
 
 ## Ownership Changes
+### Task 2: Basic chown Operations
+**Before**
+
+screenshot
+
+**after**
+
+screenshot
 
 
 ## Commands Used
