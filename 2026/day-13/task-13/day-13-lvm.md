@@ -46,16 +46,19 @@
 
 
 *verify*
+
 <img width="573" height="18" alt="Screenshot 2026-02-06 at 4 16 58 PM" src="https://github.com/user-attachments/assets/55c7b09b-91fd-427c-ac99-b37ef1c13a9a" />
 
 
 - `lvresize -r -L +300M /dev/aws_vg/aws_lv`
 
 r = resize the filesystem
+
 <img width="573" height="162" alt="Screenshot 2026-02-06 at 4 12 47 PM" src="https://github.com/user-attachments/assets/10354949-a234-42d3-b7ad-9fb44e374a73" />
 
 
 *verify*
+
 <img width="564" height="37" alt="Screenshot 2026-02-06 at 4 13 06 PM" src="https://github.com/user-attachments/assets/6109cdc8-2b42-4e7b-adcf-83cec035fd9e" />
 
 
