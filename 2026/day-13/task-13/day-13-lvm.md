@@ -7,12 +7,15 @@
 
 <img width="567" height="56" alt="Screenshot 2026-02-06 at 3 58 19 PM" src="https://github.com/user-attachments/assets/df3bd8d3-c9de-42f9-91ee-9f6a500a98d8" />
 
+---
+
 - `pvcreate` / `pvs`
 
 *After creating pysical volume*
 
 <img width="562" height="160" alt="Screenshot 2026-02-06 at 4 45 01 AM" src="https://github.com/user-attachments/assets/26143916-56cd-4f51-b139-dcd8c7c01c73" />
 
+---
 
 - `vgcreate` / `vgs`
 
