@@ -67,4 +67,5 @@ Output: Connection to localhost 22 port [tcp/ssh] succeeded!
 
 ## Reflection
 Fastest Signal When Something Breaks
+ 
  ping — immediately tells you if the host is reachable at all.
