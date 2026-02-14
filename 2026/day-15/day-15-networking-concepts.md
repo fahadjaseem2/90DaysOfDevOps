@@ -14,7 +14,8 @@ When you type google.com in a browser, your computer first checks its local DNS 
 `dig google.com `
 **Output**
 
-Screeshot
+<img width="579" height="122" alt="Screenshot 2026-02-14 at 5 48 09 PM" src="https://github.com/user-attachments/assets/6670a701-86d1-4d8c-9ba9-016fdfcee27b" />
+
 A Record: 172.253.115.113
 TTL: 263 seconds
 
@@ -42,7 +43,8 @@ All network interfaces + their IP addresses + their state.
 
 Output
 
-Screenshot
+<img width="560" height="207" alt="Screenshot 2026-02-14 at 8 32 49 PM" src="https://github.com/user-attachments/assets/309e52e7-e8a3-4bcb-923f-ebcbb6a6865a" />
+
 
 ---
 
@@ -97,7 +99,8 @@ It allows multiple services to run on one IP address.
 
 Output
 
-screenshot
+<img width="571" height="217" alt="Screenshot 2026-02-14 at 9 10 23 PM" src="https://github.com/user-attachments/assets/2954b2c1-36a9-4a39-b0e4-840492b57de0" />
+
 
 
 ## Task 5: Putting It Together
