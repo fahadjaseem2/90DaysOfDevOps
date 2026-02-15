@@ -33,9 +33,10 @@ ROLE="DevOps Engineer"
 echo "Hello, I am $NAME and I am a $ROLE"
 echo 'Hello, I am $NAME and I am a $ROLE'
 ```
-Output
+**Output**
 
-Screenshot
+<img width="572" height="57" alt="Screenshot 2026-02-15 at 8 45 26 PM" src="https://github.com/user-attachments/assets/208876d7-bcac-4a15-9143-64351bc5f703" />
+
 
 Single quotes → literal text
 
@@ -55,9 +56,10 @@ read -p "Enter your favorite tool: " TOOL
 echo "Hello $NAME, your favourite tool is $TOOL"
 ```
 
-Output
+**Output**
 
-screenshot
+<img width="582" height="75" alt="Screenshot 2026-02-15 at 9 20 30 PM" src="https://github.com/user-attachments/assets/03aeef3b-85ae-4db6-9fe4-285974306f42" />
+
 
 ---
 
@@ -83,9 +85,10 @@ fi
 
 ```
 
-Output
+**Output**
 
-screenshot
+<img width="576" height="192" alt="Screenshot 2026-02-15 at 10 54 36 PM" src="https://github.com/user-attachments/assets/23cf80b1-4396-4941-9248-093769bc538c" />
+
 
 ## Part. 2
 ### File: file_check.sh
@@ -101,9 +104,10 @@ else
 fi
 ```
 
-Output
+**Output**
 
-Screenshot
+<img width="573" height="106" alt="Screenshot 2026-02-15 at 11 03 07 PM" src="https://github.com/user-attachments/assets/a478da60-3d07-4055-acd2-c5cae7fa14df" />
+
 
 ---
 
@@ -137,7 +141,8 @@ else
 fi
 ```
 
-Output
+**Output**
 
-screenhsot
+<img width="566" height="158" alt="Screenshot 2026-02-15 at 11 58 58 PM" src="https://github.com/user-attachments/assets/05f63aca-a41c-4c42-b20e-afff85c0eeae" />
+
 
