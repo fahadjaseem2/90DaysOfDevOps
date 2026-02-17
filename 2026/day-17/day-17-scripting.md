@@ -10,7 +10,8 @@
 
 **output**
 
-Screenshot
+<img width="559" height="100" alt="Screenshot 2026-02-16 at 11 32 27 PM" src="https://github.com/user-attachments/assets/967128ef-b3fa-4c5d-8cc0-1e31929ceca5" />
+
 
 ### count.sh
 
@@ -29,7 +30,8 @@ Screenshot
 
 **Output**
 
-Screenshot
+<img width="573" height="224" alt="Screenshot 2026-02-17 at 2 02 44 PM" src="https://github.com/user-attachments/assets/9e841143-e772-4efb-849c-49ea7bc0e023" />
+
 
 ---
 
@@ -40,7 +42,8 @@ Screenshot
 
 **Output**
 
-Screenhsot
+<img width="563" height="102" alt="Screenshot 2026-02-17 at 2 11 32 PM" src="https://github.com/user-attachments/assets/fb1b9ffc-3ebc-44f8-b1df-7f71acb53cc1" />
+
 
 
 ### args_demo.sh
@@ -49,7 +52,8 @@ Screenhsot
 
 **Output**
 
-screenshot
+<img width="570" height="70" alt="Screenshot 2026-02-17 at 4 23 39 PM" src="https://github.com/user-attachments/assets/c3e8535f-40e5-4218-a68c-8b578f0d439b" />
+
 
 ---
 
@@ -59,7 +63,8 @@ screenshot
 
 **Output**
 
-screenshot
+<img width="568" height="136" alt="Screenshot 2026-02-17 at 8 41 06 PM" src="https://github.com/user-attachments/assets/c0606925-db0d-46a8-8322-e13cda46c270" />
+
 
 ---
 
@@ -69,11 +74,17 @@ screenshot
 
 **Output**
 
-screenshot
+<img width="575" height="102" alt="Screenshot 2026-02-17 at 9 30 26 PM" src="https://github.com/user-attachments/assets/cf744191-f144-423d-9a06-0ff8d15f0e08" />
+
 
 
 ### modified_install_packages.sh
 
 [script => modified_install_packages.sh](scripts-17/modified_install_packages.sh)
+
+**Output**
+
+<img width="568" height="58" alt="Screenshot 2026-02-17 at 9 28 21 PM" src="https://github.com/user-attachments/assets/5e059da9-a405-497c-b0ff-0be244de8ea7" />
+
 
 
