@@ -13,7 +13,8 @@ This script ensures your disk doesn't fill up with stale logs. It targets logs o
 
 **OUTPUT**
 
-screenshot
+<img width="719" height="90" alt="Screenshot 2026-02-22 at 12 48 25 AM" src="https://github.com/user-attachments/assets/4a38d183-b72d-4285-814c-48f1a1deb4bb" />
+
 
 ## Task 2. Server Backup Script (backup.sh)
 
@@ -23,7 +24,8 @@ Standardized backups are vital. This script uses tar for archiving and includes 
 
 **OUTPUT**
 
-screenshot
+<img width="728" height="175" alt="Screenshot 2026-02-22 at 12 56 36 AM" src="https://github.com/user-attachments/assets/0433258e-0e47-4216-9769-e3d31ec576a8" />
+
 
 ## Task 3. Crontab Entries
 ```
