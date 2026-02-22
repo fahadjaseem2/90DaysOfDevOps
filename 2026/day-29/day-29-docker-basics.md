@@ -99,5 +99,8 @@ docker rmi <Image ID>
 ### Check Logs
 `docker logs <container ID> or <container name>`
 
+<img width="565" height="185" alt="Screenshot 2026-02-23 at 1 39 14 AM" src="https://github.com/user-attachments/assets/1c860425-b236-464c-9873-f9a4d684ec98" />
+
+
 
 
