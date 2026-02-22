@@ -40,11 +40,13 @@ Container = Apartment in same building (shares host OS)
 
 ## Task 2: Install Docker
 
-Screenshot
+<img width="801" height="82" alt="Screenshot 2026-02-22 at 9 34 08 PM" src="https://github.com/user-attachments/assets/c72ccd87-fba7-4a12-af08-c02cad8e1212" />
+
 
 `docker run hello-world`
 
-Screenshot
+<img width="782" height="186" alt="Screenshot 2026-02-22 at 9 38 33 PM" src="https://github.com/user-attachments/assets/ccde6c7f-e141-406e-a4e1-204c7063839c" />
+
 
 Docker checked local image if not available on local docker Pulled image from Docker Hub and Created container Ran it on terminal and Displayed message
 
@@ -58,24 +60,28 @@ Docker checked local image if not available on local docker Pulled image from Do
 - `-p` = port mapping
 - `-- name` = custom name
 
-screenshot
+<img width="551" height="215" alt="Screenshot 2026-02-23 at 1 13 30 AM" src="https://github.com/user-attachments/assets/a33ed4eb-9239-4b5b-a9fc-c51dcc9b9ae1" />
+
 
 ### Run Ubuntu Container in Interactive Mode
 `docker run -itd ubuntu`
 
 `docker exec -it < container ID >`
 
-screenshot
+<img width="583" height="266" alt="Screenshot 2026-02-23 at 1 13 14 AM" src="https://github.com/user-attachments/assets/940039e8-607c-4880-af38-2f228edda338" />
+
 
 ### List Running Containers
 `docker ps`
 
-screenshot
+<img width="575" height="121" alt="Screenshot 2026-02-23 at 1 14 23 AM" src="https://github.com/user-attachments/assets/8fe79027-8020-484f-bff3-4e468b0895e9" />
+
 
 ### List All Containers
 `docker ps -a`
 
-screenshot
+<img width="578" height="214" alt="Screenshot 2026-02-23 at 1 15 57 AM" src="https://github.com/user-attachments/assets/625a939c-cf04-44af-9b01-16568c5edf3c" />
+
 
 ### Stop and Remove Container and Image also
 ```
@@ -83,7 +89,8 @@ docker stop <conatiner ID> && docker remove <container ID>
 docker rmi <Image ID>
 ```
 
-screenshot
+<img width="580" height="91" alt="Screenshot 2026-02-23 at 1 36 15 AM" src="https://github.com/user-attachments/assets/10482600-e469-4720-ad5d-83a7714db299" />
+
 
 ---
 
