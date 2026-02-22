@@ -51,3 +51,46 @@ Docker checked local image if not available on local docker Pulled image from Do
 ---
 
 ## Task 3: Run Real Containers
+### Run Nginx Container
+`docker run -d -p 80:80 --name my-nginx nginx`
+
+- `-d` = detached mode
+- `-p` = port mapping
+- `-- name` = custom name
+
+screenshot
+
+### Run Ubuntu Container in Interactive Mode
+`docker run -itd ubuntu`
+
+`docker exec -it < container ID >`
+
+screenshot
+
+### List Running Containers
+`docker ps`
+
+screenshot
+
+### List All Containers
+`docker ps -a`
+
+screenshot
+
+### Stop and Remove Container and Image also
+```
+docker stop <conatiner ID> && docker remove <container ID>
+docker rmi <Image ID>
+```
+
+screenshot
+
+---
+
+## Explore Advanced Option 
+
+### Check Logs
+`docker logs <container ID> or <container name>`
+
+
+
