@@ -49,3 +49,6 @@ mkdir
 
 ## Sample Output
 
+<img width="738" height="426" alt="Screenshot 2026-02-24 at 7 44 03 AM" src="https://github.com/user-attachments/assets/812bc2f1-8bc3-4d1a-a45b-b04b253ffeee" />
+
+
