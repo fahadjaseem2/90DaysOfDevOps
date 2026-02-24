@@ -2,7 +2,7 @@
 
 ## Script Name
 
-[Script: log_analyzer](script/log_analyzer.sh) 
+[Script: log_analyzer](scripts/log_analyzer.sh) 
 
 ## What the Script Does
 
