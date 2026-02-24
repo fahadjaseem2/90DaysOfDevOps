@@ -11,7 +11,8 @@
 
 `docker images`
 
-screenshot
+<img width="574" height="74" alt="Screenshot 2026-02-24 at 8 09 43 AM" src="https://github.com/user-attachments/assets/d364268e-e958-4db8-8bb8-d6eb49f09a36" />
+
 
 ### Inspect an Image
 
@@ -77,7 +78,8 @@ verify
 
 `docker ps`
 
-screenshot
+<img width="577" height="119" alt="Screenshot 2026-02-24 at 8 55 08 AM" src="https://github.com/user-attachments/assets/0d2b0f31-3369-4997-a9ba-6f8c1377797f" />
+
 
 ### View Logs
 `docker logs my-nginx-server`
@@ -95,7 +97,8 @@ screenshot
 ### Run Single Command Inside Container
 `ls`
 
-screenshot
+<img width="572" height="89" alt="Screenshot 2026-02-24 at 9 00 34 AM" src="https://github.com/user-attachments/assets/e2f4101c-126e-4b71-8975-dcb9651ed641" />
+
 
 ### Inspect Container
 `docker inspect nginx-server`
@@ -122,7 +125,8 @@ Information visible:
 ### Check Docker Disk Usage
 `docker system df`
 
-screenshot
+<img width="572" height="105" alt="Screenshot 2026-02-24 at 9 12 05 AM" src="https://github.com/user-attachments/assets/1f1caec1-99cc-46ba-a90d-cae7489ea05d" />
+
 
 ---
 
