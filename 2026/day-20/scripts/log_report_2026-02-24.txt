@@ -1,0 +1,22 @@
+--------------------------
+***** Summary Report *****
+--------------------------
+Date of Analysis: 2026-02-24
+
+Log File Name: sample_log.log
+
+Total Line Processed:     1999 
+
+Total error count:      305
+
+-----------------------------
+--- Top 5 Error Messages ---
+-----------------------------
+Top five error with their occurance:   99 WARN [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 3, error =
+  96 WARN [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error =
+  94 WARN [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error =
+   1 WARN [RecvWorker:3:QuorumCnxManager$RecvWorker@762] - Connection broken for id 3, my id = 1, error =
+   1 WARN [RecvWorker:1:QuorumCnxManager$RecvWorker@762] - Connection broken for id 1, my id = 3, error =
+
+--- Critical Events ---
+No critical events found.
