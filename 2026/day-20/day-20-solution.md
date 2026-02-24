@@ -1,7 +1,8 @@
 # Day 20 – Log Analyzer and Report Generator
 
 ## Script Name
-log_analyzer.sh
+
+[Script: log_analyzer](script/log_analyzer.sh) 
 
 ## What the Script Does
 
