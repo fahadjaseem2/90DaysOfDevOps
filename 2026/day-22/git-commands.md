@@ -41,12 +41,26 @@ What it does: Adds file to staging area
 What it does: Adds all files to staging area  
 
 ### 9 git reset <file_name>
-unstrack a file
+untrack a file
 
-### 9. git commit -m "message"
+### 10. git commit -m "message"
 What it does: Saves staged changes with a message 
 
 ---
 
 ## Viewing Changes
-### 10. git log
+### 11. git log
+What it does: Shows commit history 
+
+### 12. git log --oneline
+What it does: Shows commit history in short format  
+
+### 13. git diff
+`git diff --staged`
+
+What it does: Shows staged changes 
+
+---
+
+
+
