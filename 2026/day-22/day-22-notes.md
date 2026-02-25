@@ -32,7 +32,8 @@ commit history
 branches  
 configuration  
 
-Screenshot
+<img width="810" height="60" alt="Screenshot 2026-02-25 at 6 14 52 AM" src="https://github.com/user-attachments/assets/43dcf624-b621-4398-af39-87e965d2d499" />
+
 
 If we delete the .git folder, the repository stops being a Git repository and all version history is lost permanently.
 
