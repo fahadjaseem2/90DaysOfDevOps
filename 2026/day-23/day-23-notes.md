@@ -55,7 +55,105 @@ Delete a branch
 
 ## Task 3: Push to GitHub
 
+Create a new repository on GitHub (without README, .gitignore, or license).
+
+`git remote add origin https://github.com/fahadjaseem2/devops-git-practice.git`
+
+Push main branch
+
+`git push -u origin main`
+
+Push feature-1 branch
+
+`git push -u origin feature-1`
+
+### Difference between origin and upstream
+origin:
+The remote repository where you push your code (usually your GitHub repo).
+
+upstream:
+The original repository from which you pull updates (usually the source repo you forked).
+
+---
+
+## Task 4: Pull from GitHub
+Pull changes from GitHub
+`git pull origin main`
+
+### Difference between git fetch and git pull
+**git fetch:**
+
+Downloads changes from remote
+
+Git downloads commits, but does NOT merge them.
+
+Your code is untouched. Git just updated its knowledge of the remote branch.
+
+You can inspect safely: 
+ `git log origin/main`
+
+ or compare: 
+ `git diff main origin/main`
+
+ Only when YOU decide, you merge: 
+ `git merge origin/main`
+
+**git pull:**
+
+Downloads AND merges changes automatically
+
+Faster but less control
+
+git pull = git fetch + git merge
+
+---
+
+## Task 5: Clone vs Fork
+
+### Clone 
+creates a copy of a repository on your local machine.
+
+`git clone https://github.com/user/repo.git`
+
+### What is fork?
+Fork creates a copy of a repository in your GitHub account.
+
+Used when contributing to other projects.
+
+**Difference between clone and fork**
+
+**Clone:**
+
+•Local copy
+
+•Git command
+
+**Fork:**
+
+•Copy on GitHub
+
+•GitHub feature
+
+**When to use clone vs fork**
+
+**Clone:**
+
+When working on your own repository
+
+**Fork:**
 
 
+**When contributing to someone else's repository**
 
+After forking, how do you keep your fork in sync with the original repo?
+
+Add the original as an upstream remote:
+
+```
+git remote add upstream https://github.com/original-owner/original-repo.git
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
 
