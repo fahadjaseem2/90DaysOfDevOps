@@ -24,7 +24,8 @@ CMD ["echo", "Hello from my custom image!"]
 
 **OUTPUT**
 
-Screenshot
+<img width="574" height="124" alt="Screenshot 2026-02-27 at 2 48 56 AM" src="https://github.com/user-attachments/assets/bb36aae3-7c9d-4f11-acff-5d5245628559" />
+
 
 ---
 
