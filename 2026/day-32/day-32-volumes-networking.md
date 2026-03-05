@@ -135,6 +135,23 @@ Add content:
 | Stored in Docker’s internal directory | Linked to specific host folder |
 | Better for databases | Better for development |
 
+Docker stores the data in its own managed space, typically under:
+
+/var/lib/docker/volumes/
+
+You rarely touch those files directly.
+
+---
+
+**Bind mounts** are better for development or when you want direct access to files on the host machine.
+
+Example:
+
+volumes:
+  - ./index.html:/usr/share/nginx/html/index.html
+
+Now when you edit index.html on your computer, the container instantly serves the updated file. Great for coding, testing, or logs you want to inspect.
+
 ---
 
 ## Task 4: Docker Networking Basics

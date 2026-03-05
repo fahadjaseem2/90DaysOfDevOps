@@ -1,0 +1,53 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql_db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=task_db
+    
+    volumes: 
+      - day34_db:/var/lib/mysql
+    networks:
+      - day34-net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+#mysqladmin   → MySQL administration tool
+#ping         → check if the MySQL server is alive
+#-h localhost → connect to host "localhost"
+#
+    labels:
+      - project="day34-devops"
+
+  redis:
+    image: redis:alpine
+    container_name: t3_redis
+    networks:
+      - day34-net
+    labels:
+      - project="day34-devops"
+
+  web:
+    build: ./app
+    container_name: t3_flask
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "5000:5000"
+    networks: 
+      - day34-net
+    labels:
+      - project="day34-devops"
+   
+networks:
+  day34-net:
+    driver: bridge
+
+volumes:
+  day34_db:
