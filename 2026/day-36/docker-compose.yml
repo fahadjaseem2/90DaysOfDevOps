@@ -1,0 +1,38 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: two-tier-backend
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB}
+
+    volumes:
+      - mysql_db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+    networks:
+      - two-tier-net 
+
+  web:
+    image: fahadjaseem/two-tier-flask:v1.0.0
+    ports:
+      - "5000:5000"
+    environment:
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DB: ${MYSQL_DB}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - two-tier-net
+
+volumes:
+  mysql_db:
+
+networks:
+  two-tier-net:
