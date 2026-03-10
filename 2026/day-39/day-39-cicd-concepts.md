@@ -106,3 +106,54 @@ Examples:
 
 ---
 
+## 5. Exploring a Real Repository
+
+GitHub Repo:
+https://github.com/remsky/Kokoro-FastAPI/blob/master/.github/workflows/ci.yml
+
+### What triggers the workflow?
+**1. The workflow triggers on:**
+- Code is **pushed** to the following branches:
+  - `master`
+  - `pre-release`
+
+- A **pull request** is opened targeting:
+  - `master`
+  - `pre-release`
+
+**2. How many jobs does it have?**
+
+The workflow contains **1 job**:
+
+test
+
+This job runs on a GitHub-hosted runner using **ubuntu-latest**.
+
+**3. What does it do? (Best Guess)**
+
+The workflow performs automated testing for the project.
+
+1. **Checkout Repository**
+   - Uses `actions/checkout@v4`
+   - Downloads the project code into the runner.
+
+2. **Install System Dependencies**
+   - Installs required Linux packages using `apt-get`.
+   - Examples include:
+     - `ffmpeg`
+     - `cmake`
+     - `g++`
+     - `libsndfile1`
+     - `espeak-ng`
+
+3. **Install Python Environment**
+   - Uses `astral-sh/setup-uv@v5`.
+   - Installs Python version **3.10**.
+   - Enables dependency caching.
+
+
+4. **Install Project Dependencies**
+   - Runs:
+
+   ```bash
+   uv pip install -e .[test,cpu]
