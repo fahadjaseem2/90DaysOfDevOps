@@ -65,9 +65,15 @@ Useful for scripts, configuration files, or any text where line breaks matter.
 ---
 
 ### Task 5: YAML Validation
+**person.yml**
+
 <img width="793" height="386" alt="Screenshot 2026-03-10 at 4 18 32 AM" src="https://github.com/user-attachments/assets/5521472b-9483-4b81-8813-5bda0c32e184" />
 
+**server.yml**
+
 <img width="794" height="477" alt="Screenshot 2026-03-10 at 4 19 57 AM" src="https://github.com/user-attachments/assets/21c3670c-e82d-42c6-9b35-8975c5dd23b8" />
+
+**server.yml** fix error
 
 <img width="804" height="383" alt="Screenshot 2026-03-10 at 4 17 53 AM" src="https://github.com/user-attachments/assets/6549c3f8-bc91-4437-8974-65bd834803b1" />
 
