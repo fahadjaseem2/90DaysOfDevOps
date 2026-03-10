@@ -1,0 +1,28 @@
+name: Greet User
+
+on:
+  push:
+    branch: [main]
+
+jobs:
+  greet: # error = forget to add jobs name
+    runs-on: ubuntu-latest  # error = runs-on wrote _ instead of - 
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4 # error = wrote run instead of uses
+
+      - name: greet user and date 
+        run: echo "Hello $USER" && date
+
+      - name: branch name
+        run: echo "${{ github.ref_name }}"
+
+      - name: list of file in repo
+        run: ls -la
+      
+      - name: running operator
+        run: uname -a
+
+      - name: running OS
+        run: echo "Runner OS:$RUNNER_OS"
+        
