@@ -3,7 +3,9 @@
 ## Task 1: GitHub-Hosted Runners on Three OSes
 - Workflow file: [.github/workflows/multi-os.yml](https://github.com/fahadjaseem2/github-actions-practice/blob/main/.github/workflows/multi-os.yml)
 - Screenshot showing three jobs running in parallel:
-  !
+
+<img width="1305" height="544" alt="Screenshot 2026-03-11 at 11 11 10 AM" src="https://github.com/user-attachments/assets/04d3afe9-af12-4f51-8f0e-4e5fdaa34fa9" />
+
 
 **What is a GitHub-hosted runner? Who manages it?**  
 A GitHub-hosted runner is a virtual machine provided and managed by GitHub that executes jobs in GitHub Actions. GitHub handles all infrastructure, updates, and maintenance. Users simply select the desired operating system (e.g., `ubuntu-latest`, `windows-latest`, `macos-latest`) and the job runs on a clean, ephemeral instance.
@@ -11,7 +13,9 @@ A GitHub-hosted runner is a virtual machine provided and managed by GitHub that 
 ## Task 2: Explore Pre-installed Tools
 - Added step to print Docker, Python, Node, Git versions.
 - Screenshot of the job output:
-  !
+
+<img width="1312" height="583" alt="Screenshot 2026-03-11 at 11 10 11 AM" src="https://github.com/user-attachments/assets/420436a0-8bf5-44c3-a06a-4e199885d3bf" />
+
 
 **Why does it matter that runners come with tools pre‑installed?**  
 Pre‑installed tools save time and reduce complexity in workflows. You don’t need to write additional steps to install common software like Git, Docker, or language runtimes. This ensures faster execution, consistency across runs, and eliminates potential errors from manual installations. GitHub maintains these images, so you always get well‑tested versions.
@@ -19,13 +23,17 @@ Pre‑installed tools save time and reduce complexity in workflows. You don’t 
 ## Task 3: Set Up a Self-Hosted Runner
 - Runner registered on my local machine (Ubuntu VM).
 - Screenshot of runner showing as **Idle** in GitHub settings:
-  !
+
+<img width="788" height="217" alt="Screenshot 2026-03-11 at 11 12 52 AM" src="https://github.com/user-attachments/assets/fdd6a729-ebb2-479b-8a0e-9fda605a83b3" />
+
 
 ## Task 4: Use Your Self-Hosted Runner
 - Workflow file: [.github/workflows/self-hosted.yml](https://github.com/fahadjaseem2/github-actions-practice/blob/main/.github/workflows/self-hosted.yml
 )
 - Screenshot of the job running on my machine:
-  !
+
+<img width="962" height="433" alt="Screenshot 2026-03-11 at 11 14 14 AM" src="https://github.com/user-attachments/assets/db260c36-85fa-4a6f-beb7-26081aef4928" />
+
 - After the run, file `demo-file.txt` was created on my machine – verified in the runner’s working directory.
 
 ## Task 5: Labels
