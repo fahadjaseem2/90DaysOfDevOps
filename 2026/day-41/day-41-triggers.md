@@ -15,7 +15,8 @@ Opened a Pull Request against main
 **Result**
 The workflow automatically triggered and appeared on the Pull Request page.
 
-Screenshot: 
+<img width="1315" height="626" alt="Screenshot 2026-03-11 at 8 57 20 AM" src="https://github.com/user-attachments/assets/d106d571-3f2b-461c-a18a-699afcbebbc7" />
+
 
 ---
 
@@ -51,7 +52,8 @@ Output:
 
 Deploying to production
 
-Screenshot: (Add manual workflow screenshot here)
+<img width="1297" height="602" alt="Screenshot 2026-03-11 at 8 58 19 AM" src="https://github.com/user-attachments/assets/42cb4223-5cec-484e-b3c6-30f14d111ec2" />
+
 
 ---
 
@@ -68,7 +70,8 @@ Matrix builds allow running the same job across multiple environments simultaneo
 
 Total Jobs Run: Initially, 2 OS × 3 Versions = 6 jobs. After excluding (Windows + Python 3.10), the total number of jobs executed was 5.
 
-screenshot
+<img width="1315" height="505" alt="Screenshot 2026-03-11 at 8 59 05 AM" src="https://github.com/user-attachments/assets/689a0139-e0a4-4d78-8ad7-038cc822d9e7" />
+
 
 ---
 
@@ -96,4 +99,4 @@ fail-fast: false
 All remaining jobs continue running even if one fails.
 
 
-screenshot
+<img width="1309" height="525" alt="Screenshot 2026-03-11 at 8 59 54 AM" src="https://github.com/user-attachments/assets/32a7b61f-4374-4f50-b8c5-8029c0af4b33" />
