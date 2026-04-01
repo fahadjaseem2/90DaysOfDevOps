@@ -61,6 +61,9 @@ depends on VPC) or subnet_id = aws_subnet.public.id (association depends on subn
 
 VPC before subnet; attempting subnet first fails with "VPC not found" error
 
+<img width="579" height="385" alt="Screenshot 2026-04-01 at 5 33 49 AM" src="https://github.com/user-attachments/assets/561fd677-3fbd-47f7-8bec-8b84844cca2e" />
+
+
 ## Task 5: Explicit Dependencies with depends_on
 ### Explicit Dependencies and Graph
 S3 bucket uses depends_on = [aws_instance.main] despite no reference, forcing creation after 
@@ -68,6 +71,8 @@ S3 bucket uses depends_on = [aws_instance.main] despite no reference, forcing cr
 EC2—for example, when bucket policy needs instance role or logging starts post-launch. Real uses: 
 
 Lambda + CloudWatch trigger; module outputs not directly referenceable
+<img width="1035" height="416" alt="Screenshot 2026-04-01 at 5 47 40 AM" src="https://github.com/user-attachments/assets/d72243a2-f121-49a5-b1ef-5a6863fadb6a" />
+<img width="316" height="545" alt="Screenshot 2026-04-01 at 6 19 00 AM" src="https://github.com/user-attachments/assets/eea3f955-cdd9-4fcd-ac0e-276fe1140b0b" />
 
 
 ## Lifecycle Rules and Destroy
