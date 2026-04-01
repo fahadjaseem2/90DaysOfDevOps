@@ -25,7 +25,7 @@ resource aws_security_group my_security_group {
 	description = "this is optional"
 }
 
-# inbound and outbound rule
+# inbound and outbound rule	
 
 resource aws_vpc_security_group_ingress_rule allow_http {
 	security_group_id = aws_security_group.my_security_group.id
