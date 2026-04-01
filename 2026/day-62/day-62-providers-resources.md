@@ -52,8 +52,7 @@ Terraform builds a dependency graph using references like:
 aws_vpc.main.id
 
 ---
-
-## Explicit Dependencies with depends_on
+## Task 4: Add a Security Group and EC2 Instance
 
 ### Implicit Dependencies
 Terraform detects implicit dependencies via references like vpc_id = aws_vpc.main.id (subnet 
@@ -62,6 +61,7 @@ depends on VPC) or subnet_id = aws_subnet.public.id (association depends on subn
 
 VPC before subnet; attempting subnet first fails with "VPC not found" error
 
+## Task 5: Explicit Dependencies with depends_on
 ### Explicit Dependencies and Graph
 S3 bucket uses depends_on = [aws_instance.main] despite no reference, forcing creation after 
 
