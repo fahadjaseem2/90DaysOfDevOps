@@ -40,3 +40,8 @@ crash.log
 .pytest_cache/
 coverage/
 CLAUDE.md
+
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.backup

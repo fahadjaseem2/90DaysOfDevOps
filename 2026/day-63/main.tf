@@ -1,3 +1,15 @@
+# locals
+locals {
+	name_prefix = "${var.project_name}-${var.environment}"
+	common_tags = {
+		Project = var.project_name
+		Environment = var.environment
+		ManagedBy = "Terraform"
+	}
+}
+
+
+
 # key pair
 resource aws_key_pair my_key {
 key_name = "terra-day2"
@@ -10,22 +22,26 @@ public_key = file("terra-day2.pub")
 # aws vpc
 
 resource "aws_vpc" "main" {
-  cidr_block       = "10.0.0.0/16"
+  cidr_block       = var.vpc_cidr
  
-  tags = {
-    Name = "erraWeek-VPC"
-  }
+  tags = merge (local.common_tags, {
+	Name = "${local.name_prefix}-vpc"
+	},
+	var.extra_tags
+	)
 }
 
 # aws subnet
 
 resource "aws_subnet" "main" {
   vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.1.0/24"
+  cidr_block = var.subnet_cidr
+  availability_zone = data.aws_availability_zones.available.names[0]
 
-  tags = {
-    Name = "TerraWeek-Public-Subnet"
-  }
+  tags = merge (local.common_tags, {
+	Name = "${local.name_prefix}-subnet"
+	},
+	var.extra_tags)
 }
 
 # aws internet gateway
@@ -57,26 +73,30 @@ resource "aws_route_table_association" "route_table_association" {
 
 
 resource "aws_security_group" "Terra_SG" {
-  name        = "TerraWeek-SG"
+  name        = "${var.project_name}-SG"
   description = "Allow TLS inbound traffic and all outbound traffic"
   vpc_id      = aws_vpc.main.id
+
+  tags = merge (
+    {
+        Name = "${var.project_name}-SG"
+        Environment = var.environment
+    },
+    var.extra_tags
+  )
 }
 
-resource "aws_vpc_security_group_ingress_rule" "allow_ssh" {
+resource "aws_vpc_security_group_ingress_rule" "allow_ports" {
+  for_each = toset(var.allowed_ports)
+# toset() converts a list → set (list allow duplicate And set dont allow dupplicate)
+
   security_group_id = aws_security_group.Terra_SG.id
   cidr_ipv4         = "0.0.0.0/0"
-  from_port         = 22
+  from_port         = each.value
   ip_protocol       = "tcp"
-  to_port           = 22
+  to_port           = each.value
 }
 
-resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
-  security_group_id = aws_security_group.Terra_SG.id
-  cidr_ipv4         = aws_vpc.main.cidr_block
-  from_port         = 80
-  ip_protocol       = "tcp"
-  to_port           = 80
-}
 
 resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
   security_group_id = aws_security_group.Terra_SG.id
@@ -87,20 +107,29 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
 
 # aws instance
 resource aws_instance new_instance {
-  ami = "ami-0d76b909de1a0595d"
-  instance_type = "t3.micro"
+  ami = data.aws_ami.my_ami.id
+
+  instance_type = var.instance_type
+
   key_name = aws_key_pair.my_key.key_name
+
   subnet_id = aws_subnet.main.id
+
   associate_public_ip_address = true
+
   vpc_security_group_ids = [aws_security_group.Terra_SG.id]
   root_block_device {
     volume_size = 8
     volume_type = "gp3"
   }
 
-  tags = {
-    Name = "TerraWeek-Server"
-  }
+  tags = merge (local.common_tags,
+    {
+    Name = "${local.name_prefix}-Server"
+  },
+  var.extra_tags
+  )
+
   lifecycle {
   create_before_destroy = true
   # ignore_changes = [instance_state]
@@ -117,5 +146,31 @@ resource "aws_s3_bucket" "my_bucket2" {
 
 resource "aws_ec2_instance_state" "instance_state" {
   instance_id = aws_instance.new_instance.id
-  state       = "stopped"
+  state       = "running"
+}
+
+#data 
+data "aws_ami" "my_ami" {
+  most_recent      = true
+  owners           = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
+#data source for AZS
+data "aws_availability_zones" "available" {
+  state = "available"
 }
