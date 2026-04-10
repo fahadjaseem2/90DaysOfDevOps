@@ -1,3 +1,4 @@
+<img width="570" height="256" alt="Screenshot 2026-04-09 at 3 08 18 PM" src="https://github.com/user-attachments/assets/5a8548af-0dab-4d01-b200-648e1fe59c37" />
 # 📦 Terraform State Deep Dive (Day Learning Notes)
 
 ## ✅ 1. How many resources does Terraform track?
@@ -6,7 +7,7 @@ From the `terraform state list`, Terraform is currently tracking:
 
 👉 **16 resources**
 
-
+<img width="570" height="256" alt="Screenshot 2026-04-09 at 3 08 18 PM" src="https://github.com/user-attachments/assets/2dd9a576-610f-43de-b67b-dc121f70c21c" />
 
 
 ---
