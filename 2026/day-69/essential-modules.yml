@@ -1,0 +1,67 @@
+---
+- name: install and remove package
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Update system
+      apt:
+        update_cache: yes
+
+    - name: Install multiple packages
+      apt:
+        name:
+          - git
+          - curl
+          - wget
+          - tree
+        state: present
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Ensure Nginx is runnig
+      service:
+        name: nginx
+        state: started
+        enabled: true
+
+    - name: copy files from control node to managed nodes
+      copy:
+        src: file/app.conf
+        dest: /etc/app.conf
+        owner: root
+        group: root
+        mode: '0644'
+
+
+    - name: Create directories and manage permissions
+      file:
+        path: /opt/myapp
+        state: directory
+        owner: ubuntu
+        mode: '0755'
+
+    - name: Check disk usage
+      command: df -h
+      register: disk_output
+
+    - name: Print disk space
+      debug:
+        var: disk_output.stdout_lines
+
+    - name: count running processes
+      shell: ps aux | wc -l
+      register: running_output
+
+    - name: print running prpcesses
+      debug:
+        msg: " Total Running Process: {{ running_output.stdout }}"
+
+    - name: Set timezone in environment
+      lineinfile:
+        path: /etc/environment
+        line: 'TZ=Asia/Kolkata'
+        create: true

@@ -1,0 +1,59 @@
+- name: Configure web server
+  hosts: web
+  become: true
+
+  tasks:
+    - name: Update system packages # apt-get update
+      apt:
+        update_cache: yes
+
+    #- name: update system packages  # apt-get upgrade
+    #  apt:
+    #   name: "*"
+    #   state: latest
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: true
+
+- name: Configure app server
+  hosts: app
+  become: true
+
+  tasks:
+    - name: Install Node.js dependencies
+      apt:
+        name:
+          - gcc
+          - make
+        state: present
+
+    - name: Create app directory
+      file:
+        path: /opt/app
+        state: directory
+        mode: '0755'
+
+
+- name: Configure database server
+  hosts: db
+  become: yes
+
+  tasks:
+    - name: Install MySQL client
+      apt:
+        name: mysql
+        state: present
+
+    - name: Create data directory
+      file:
+        path: /var/lib/appdata
+        state: present
+        mode: '0700'
+        
