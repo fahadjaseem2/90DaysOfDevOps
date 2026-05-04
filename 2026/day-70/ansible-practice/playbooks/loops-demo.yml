@@ -1,0 +1,49 @@
+---
+- name: Loop demo
+  hosts: all
+  become: yes
+
+  vars:
+    users:
+      - name: deploy
+        group: sudo
+      - name: monitor
+        group: sudo
+      - name: appuser
+        group: users
+
+    directories:
+      - /opt/app/logs
+      - /opt/app/config
+      - /opt/app/data
+      - /opt/app/tmp
+
+  tasks:
+    - name: Create multiple users
+      user:
+        name: "{{ item.name }}"
+        group: "{{ item.group }}"
+        state: present
+      loop: "{{ users }}"
+
+    - name: Create multiple directories
+      file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+      loop: "{{ directories }}"
+
+    - name: Install multiple packages
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - git
+        - curl
+        - unzip
+        - jq
+
+    - name: Print each user created
+      debug:
+        msg: "User created {{ item.name }} in group {{ item.group }}"
+      loop: "{{ users }}"
