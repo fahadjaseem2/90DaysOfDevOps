@@ -1,0 +1,48 @@
+---
+- name: Apply common config
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Install common packages
+      apt:
+        name: "{{ common_packages }}"
+        state: present
+
+    - name: Show environment
+      debug:
+        msg: "Environment: {{ app_env }}"
+
+- name: Configure web servers
+  hosts: web
+  become: true
+  roles:
+    - role: webserver
+      vars:
+        app_name: terraweek
+        http_port: 80
+
+  tasks:
+    - name: Show web config
+      debug:
+        msg: "HTTP port: {{ http_port }}, Max connections: {{ max_connections }}"
+    - name: Show host-specific message
+      debug:
+        msg: "{{ custom_message | default('No message') }}"
+
+- name: Configure app servers with docker
+  hosts: app
+  become: true
+  roles:
+    - geerlingguy.docker
+
+- name: Configure database server
+  hosts: db
+  become: true
+  tasks:
+    - name: Create db config
+      template:
+        src: ../templates/db-config.j2
+        dest: /etc/db-config.env
+        owner: root
+        mode: '0600'
